@@ -65,7 +65,7 @@ MODEL_CONFIG = {
         "type": "video",
         "orientation": "portrait",
         "n_frames": 450
-    }
+    },
     # Video models with 10s duration (300 frames)
     "sora2-landscape-10s": {
         "type": "video",
