@@ -33,7 +33,39 @@ MODEL_CONFIG = {
         "type": "image",
         "width": 360,
         "height": 540
+    },,
+    # Video models with 10s duration (300 frames)
+    "sora-video-10s": {
+        "type": "video",
+        "orientation": "landscape",
+        "n_frames": 300
     },
+    "sora-video-landscape-10s": {
+        "type": "video",
+        "orientation": "landscape",
+        "n_frames": 300
+    },
+    "sora-video-portrait-10s": {
+        "type": "video",
+        "orientation": "portrait",
+        "n_frames": 300
+    },
+    # Video models with 15s duration (450 frames)
+    "sora-video-15s": {
+        "type": "video",
+        "orientation": "landscape",
+        "n_frames": 450
+    },
+    "sora-video-landscape-15s": {
+        "type": "video",
+        "orientation": "landscape",
+        "n_frames": 450
+    },
+    "sora-video-portrait-15s": {
+        "type": "video",
+        "orientation": "portrait",
+        "n_frames": 450
+    }
     # Video models with 10s duration (300 frames)
     "sora2-landscape-10s": {
         "type": "video",
@@ -1396,7 +1428,7 @@ class GenerationHandler:
             task = Task(
                 task_id=task_id,
                 token_id=token_obj.id,
-                model=f"sora2-video-{model_config['orientation']}",
+                model=f"sora-video-{model_config['orientation']}",
                 prompt=full_prompt,
                 status="processing",
                 progress=0.0
@@ -1489,7 +1521,7 @@ class GenerationHandler:
             task = Task(
                 task_id=task_id,
                 token_id=token_obj.id,
-                model=f"sora2-video-{model_config['orientation']}",
+                model=f"sora-video-{model_config['orientation']}",
                 prompt=f"remix:{remix_target_id} {clean_prompt}",
                 status="processing",
                 progress=0.0
