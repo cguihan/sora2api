@@ -33,7 +33,7 @@ MODEL_CONFIG = {
         "type": "image",
         "width": 360,
         "height": 540
-    },,
+    },
     # Video models with 10s duration (300 frames)
     "sora-video-10s": {
         "type": "video",
