@@ -35,4 +35,4 @@ jobs:
           file: ./Dockerfile
           push: true
           # 镜像标签：用户名/仓库名:latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sora2:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sora2api:latest
